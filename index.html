@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="경영학과 3학년 김민균의 관심 분야, 취미와 목표를 소개합니다.">
+  <title>김민균 | 자기소개</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: "맑은 고딕", "Apple SD Gothic Neo", sans-serif;
+      background: #f4f6fb;
+      color: #243449;
+      line-height: 1.7;
+      overflow-wrap: anywhere;
+    }
+
+    .container {
+      width: min(920px, calc(100% - 40px));
+      margin: 0 auto;
+    }
+
+    /* 상단: 남색 소개 영역 */
+    .hero {
+      position: relative;
+      overflow: hidden;
+      padding: 72px 0;
+      background: #142747;
+      color: #ffffff;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      top: -110px;
+      right: -90px;
+      width: 340px;
+      height: 340px;
+      border: 50px solid rgba(255, 255, 255, 0.06);
+      border-radius: 50%;
+      pointer-events: none;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      align-items: center;
+      gap: 32px;
+    }
+
+    .avatar {
+      display: grid;
+      place-items: center;
+      flex-shrink: 0;
+      width: 120px;
+      height: 120px;
+      border: 1px solid #526682;
+      border-radius: 32px;
+      background: #263d61;
+      font-size: 3.5rem;
+      transform: rotate(-5deg);
+    }
+
+    .eyebrow {
+      margin: 0 0 12px;
+      color: #b6cdf8;
+      font-size: 0.875rem;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+    }
+
+    h1 {
+      margin: 0 0 20px;
+      font-size: clamp(2rem, 6vw, 3rem);
+      line-height: 1.35;
+    }
+
+    h1 span {
+      color: #b6cdf8;
+    }
+
+    .affiliation {
+      display: inline-block;
+      margin: 0;
+      padding: 7px 16px;
+      border: 1px solid #60718d;
+      border-radius: 999px;
+      color: #e4ecfa;
+    }
+
+    /* 하단: 밝은 본문 영역 */
+    main {
+      padding: 40px 0;
+    }
+
+    .section {
+      margin-bottom: 24px;
+      padding: 30px;
+      border: 1px solid #e2e7f0;
+      border-radius: 20px;
+      background: #ffffff;
+      box-shadow: 0 6px 24px rgba(20, 39, 71, 0.04);
+    }
+
+    .section:last-child {
+      margin-bottom: 0;
+    }
+
+    h2 {
+      margin: 0 0 20px;
+      color: #142747;
+      font-size: 1.375rem;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 16px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .tile {
+      padding: 24px 16px;
+      border-radius: 14px;
+      background: #f5f7fc;
+      text-align: center;
+    }
+
+    .emoji {
+      display: block;
+      margin-bottom: 12px;
+      font-size: 2.5rem;
+      line-height: 1.4;
+    }
+
+    .tile strong {
+      display: block;
+      font-size: 1.125rem;
+    }
+
+    .detail {
+      display: block;
+      margin-top: 6px;
+      color: #566780;
+      font-size: 0.875rem;
+    }
+
+    .hobbies .tile {
+      background: #edf3ff;
+    }
+
+    .goal {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      border-left: 5px solid #426bc1;
+      background: #edf3ff;
+    }
+
+    .goal-icon {
+      flex-shrink: 0;
+      font-size: 2.5rem;
+    }
+
+    .goal h2 {
+      margin-bottom: 4px;
+      color: #4b6081;
+      font-size: 1rem;
+    }
+
+    .goal p {
+      margin: 0;
+      color: #142747;
+      font-size: 1.75rem;
+      font-weight: 700;
+    }
+
+    footer {
+      padding: 0 20px 28px;
+      color: #68758a;
+      text-align: center;
+      font-size: 0.875rem;
+    }
+
+    /* 스마트폰 화면 대응 */
+    @media (max-width: 600px) {
+      .hero {
+        padding: 44px 0;
+      }
+
+      .hero-content {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 24px;
+      }
+
+      .avatar {
+        width: 90px;
+        height: 90px;
+        border-radius: 24px;
+        font-size: 2.75rem;
+      }
+
+      main {
+        padding: 24px 0;
+      }
+
+      .section {
+        padding: 22px;
+      }
+
+      .grid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+      }
+
+      .tile {
+        display: flex;
+        align-items: center;
+        gap: 18px;
+        padding: 18px;
+        text-align: left;
+      }
+
+      .emoji {
+        flex-shrink: 0;
+        margin-bottom: 0;
+        font-size: 2rem;
+      }
+
+      .detail {
+        margin-top: 2px;
+      }
+
+      .goal {
+        gap: 14px;
+      }
+
+      .goal p {
+        font-size: 1.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <div class="container hero-content">
+      <div class="avatar" aria-hidden="true">👋</div>
+      <div>
+        <p class="eyebrow">ABOUT ME</p>
+        <h1>안녕하세요!<br><span>김민균</span>입니다.</h1>
+        <p class="affiliation">경영학과 3학년</p>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="section" aria-labelledby="interests-title">
+      <h2 id="interests-title">관심 분야</h2>
+      <ul class="grid">
+        <li class="tile">
+          <span class="emoji" aria-hidden="true">📈</span>
+          <div>
+            <strong>주식투자</strong>
+          </div>
+        </li>
+        <li class="tile">
+          <span class="emoji" aria-hidden="true">⚽</span>
+          <div>
+            <strong>축구</strong>
+            <span class="detail">프리미어 리그</span>
+          </div>
+        </li>
+        <li class="tile">
+          <span class="emoji" aria-hidden="true">🏀</span>
+          <div>
+            <strong>농구</strong>
+            <span class="detail">NBA</span>
+          </div>
+        </li>
+      </ul>
+    </section>
+
+    <section class="section hobbies" aria-labelledby="hobbies-title">
+      <h2 id="hobbies-title">좋아하는 것 3가지</h2>
+      <ul class="grid">
+        <li class="tile">
+          <span class="emoji" aria-hidden="true">💪</span>
+          <strong>헬스</strong>
+        </li>
+        <li class="tile">
+          <span class="emoji" aria-hidden="true">🎮</span>
+          <strong>게임</strong>
+        </li>
+        <li class="tile">
+          <span class="emoji" aria-hidden="true">🎬</span>
+          <strong>영화감상</strong>
+        </li>
+      </ul>
+    </section>
+
+    <section class="section goal" aria-labelledby="goal-title">
+      <span class="goal-icon" aria-hidden="true">🎯</span>
+      <div>
+        <h2 id="goal-title">나의 목표</h2>
+        <p>주식으로 수익내기</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>© 2026 김민균</footer>
+</body>
+</html>
